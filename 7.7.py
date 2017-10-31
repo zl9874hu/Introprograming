@@ -12,6 +12,23 @@ col_2=input('Enter the column 2 header:\n')#second column
 print('You entered:',col_2)
 print()
 data_point=input('Enter a data point (-1 to stop input):\n')
+while data_point != '-1':
+    d= data_point.split(',')
+    if len(d)>1:
+        d[1].replace(" ","")
+    if len(d)==1:
+        print('Error, No comma in string')
+    elif len(d) >= 3:
+        print('Error: Too many commas in input.')
+    elif d[1].isdigit()!= True:
+        print('Error, Comma not followed by integer')
+    else:
+        print('Data string:',d[0])
+        print('Data integer:',d[1])
+        print()
+        data+=('%s,')%data_point
+    data_point=input('Enter a data point (-1 to stop input):\n')    
+    
 data=data.split(',')
 print()
 print('%33s'%title)#formats the title
@@ -19,6 +36,12 @@ print('%-20s|%23s'%(col_1,col_2))#formats the columns
 print('-'*44)#makes the horizontal line
 for points in range(0,(len(data)-math.ceil((len(data)/2)))):#subtracting the data divided by 2 and rounding up prevents index errors
     print('%-20s|%23s'%(data[i],data[i+1]))#inputs the data
-    i=i+2z
+    i=i+2
 i=0
 print()
+for x in range(1,len(data),2):
+    data[x]=int(data[x])
+for points in range(0,(len(data)-math.ceil((len(data)/2)))):
+    print('%20s'%data[i],('*'*(int(data[i+1]))))
+    i+=2
+#Did Loop and finished point graph.-Derek
