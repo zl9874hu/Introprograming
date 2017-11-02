@@ -9,9 +9,32 @@ decode_dict={'M':'Z','N':'Y','B':'X','V':'W','C':'V',
               'R':'D','E':'C','W':'B','Q':'A'}#flips the key-value pairs of encode_dict
 #Replaces alphabet with qwerty
 def encode(sentence):#encodes the sentence
-    
+    encoded=[]
+    sen= sentence.replace(' ','^')
+    sen= sen.upper()
+    sen= list(sen)
+    for i in sen:
+        if encode_dict.get(i,'$')!= '$':
+            encoded.append(encode_dict.get(i,'$'))
+        else:
+            encoded.append(i)
+    encoded=''.join(encoded)
+    encoded= encoded.replace('^',' ')
+    return encoded
+        
 def decode(sentence):
-    
+    decoded=[]
+    sen= sentence.replace(' ','^')
+    sen= sen.upper()
+    sen= list(sen)
+    for i in sen:
+        if decode_dict.get(i,'$')!= '$':
+            decoded.append(decode_dict.get(i,'$'))
+        else:
+            decoded.append(i)
+    decoded=''.join(decoded)
+    decoded= decoded.replace('^',' ')
+    return decoded
 option=input('1 for encoding\n\
 2 for decode a previously encoded message\n\
 3 to decode a new sentence\nq to quit\n:')#decided to make a menue
@@ -40,3 +63,4 @@ while option != 'q':#user quits by inputting q
         option=input('1 for encoding\n\
 2 for decode a previously encoded message\n\
 3 to decode a new message\nq to quit\n:')
+#Derek-Finished fucuntions
