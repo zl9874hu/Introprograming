@@ -10,10 +10,13 @@ print('.insert will insert an item in a list before the specicified position.',l
 list1.remove(300)
 print('.remove will remove the first item in a list that matches the specified item.',list1)
 print('.pop() removes and returns the last item (or at specified index) in a list.',list2.pop(),list2)
-list2.sort()
+list2.sort
 print('.sort will sort a list in an ascending order',list2)
-list1.reverse()
+list.reverse
 print('.reverse will reverse the list',list1)
 print('.index returns the index with the first item with the designated value.',list1.index(0))
 print('.count counts the number of items with the esignated value.',list1.count(23))
+#I think these should all be stock base, like Adding a number is adding a new stock value, sum adds total stock value, insert is new stock name, remove is selling of a stock,
+#sort is sorting stock by name, pop is removing stock name, reverse is reverse, index finds a price value, and count will count number of shared prices.
+
 
