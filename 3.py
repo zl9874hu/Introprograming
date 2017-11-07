@@ -1,11 +1,11 @@
-encode_dict={'A':'Q','B':'W','C':'E','D':'R','E':'T','F':'Y',
-     'H':'U','I':'I','J':'P','K':'A','L':'S','M':'D',
+encode_dict={'A':'Q','B':'W','C':'E','D':'R','E':'T','F':'Y','G':'U',
+     'H':'I','I':'O','J':'P','K':'A','L':'S','M':'D',
      'N':'F','O':'G','P':'H','Q':'J','R':'K','S':'L',
      'T':'Z','U':'X','V':'C','W':'V','X':'B','Y':'N','Z':'M'}
 decode_dict={'M':'Z','N':'Y','B':'X','V':'W','C':'V',
               'X':'U','Z':'T','L':'S','K':'R','J':'Q','H':'P','G':'O',
               'F':'N','D':'M','S':'L','A':'K',
-              'P':'J','I':'I','U':'H','Y':'F','T':'E',
+              'P':'J','O':'I','I':'H','U':'G','Y':'F','T':'E',
               'R':'D','E':'C','W':'B','Q':'A'}#flips the key-value pairs of encode_dict
 #Replaces alphabet with qwerty
 def encode(sentence):#encodes the sentence
