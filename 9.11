@@ -10,7 +10,8 @@ class ShoppingCart:
         self.customer_name=customer_name
         self.cart_items=cart_items
     def add_item(self,ItemToPurchase):
-        pass
+        self.cart_items.append(ItemToPurchase)
+        return
     def remove_item(self,string=''):
         if sting in self.cart_items:
             self.cart_items.remove(string)
@@ -20,12 +21,23 @@ class ShoppingCart:
     def modify_item(self):
         pass
     def get_num_items_in_cart(self):
-        print(len(self.cart_items))
-        return
+        tot_items=0
+        for x in self.cart_items:
+            tot_items+=x.item_quantity
+        return tot_items
     def get_cost_of_cart(self):
-        pass
+        tot_cost=0
+        for x in self.cart_items:
+            tot_cost+=(x.item_price * x.item_quantity)
+        return tot_cost
     def print_total(self):
-        pass
+        num_items=get_num_items_in_cart()
+        total_cost= get_cost_of_cart()
+        print('OUTPUT SHOPPING CART')
+        print("%s's Shopping Cart -"%customer_name,current_date)
+        print('Number of Items:',num_items)
+        print()
+        print('Total Cost: $%d'%total_cost)
     def print_descriptions(self):
         print('OUTPUT ITEMS DESCRIPTIONS')
         pass
@@ -60,5 +72,5 @@ if __name__ == "__main__":
         if option is 'i':
             pass
         if option is 'o':
-            pass
+            print_total
         option=input('Choose an option:\n')
