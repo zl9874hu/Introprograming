@@ -1,0 +1,64 @@
+class ItemToPurchase:#makes the classs
+    def __init__(self,item_name='none',item_price=0,item_quantity=0,item_description='none'):#defaults name price description and quanity
+        self.item_name=item_name
+        self.item_price=item_price
+        self.item_quantity=item_quantity
+        self.item_description=item_description
+class ShoppingCart:
+    def __init__(self,customer_name='non',current_date="January 1, 2016",cart_items=[]):
+        self.current_date=current_date
+        self.customer_name=customer_name
+        self.cart_items=cart_items
+    def add_item(self,ItemToPurchase):
+        pass
+    def remove_item(self,string=''):
+        if sting in self.cart_items:
+            self.cart_items.remove(string)
+        else:
+            print('Item not found in cart. Nothing removed.')
+        return
+    def modify_item(self):
+        pass
+    def get_num_items_in_cart(self):
+        print(len(self.cart_items))
+        return
+    def get_cost_of_cart(self):
+        pass
+    def print_total(self):
+        pass
+    def print_descriptions(self):
+        print('OUTPUT ITEMS DESCRIPTIONS')
+        pass
+def print_menu(ShopingCart):
+    global option
+    option=''
+    print('MENU')
+    print('a - Add item to cart')
+    print('r - Remove item from cart')
+    print('c - Change item quantity')
+    print("i - Output items' descriptions")
+    print('o - Output shopping cart')
+    print('q - Quit')
+    print()
+    option=input('Choose an option:\n')
+    return
+if __name__ == "__main__":
+    customer_name=input("Enter customer's name:\n")
+    current_date=input("Enter today's date:\n")
+    print()
+    print("Customer name:", customer_name)
+    print("Today's date:",current_date)
+    print()
+    print_menu(ShoppingCart)
+    while option != 'q':
+        if option is 'a':
+            pass
+        if option is 'r':
+            pass
+        if option is 'c':
+            pass
+        if option is 'i':
+            pass
+        if option is 'o':
+            pass
+        option=input('Choose an option:\n')
