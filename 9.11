@@ -10,11 +10,12 @@ class ShoppingCart:
         self.customer_name=customer_name
         self.cart_items=cart_items
     def add_item(self,ItemToPurchase):
+        print('ADD ITEM TO CART')
         self.cart_items.append(ItemToPurchase)
         return
-    def remove_item(self,string=''):
-        if sting in self.cart_items:
-            self.cart_items.remove(string)
+    def remove_item(self,item_name=''):
+        if item_name in self.cart_items:
+            self.cart_items.remove(item_name)
         else:
             print('Item not found in cart. Nothing removed.')
         return
@@ -31,6 +32,7 @@ class ShoppingCart:
             tot_cost+=(x.item_price * x.item_quantity)
         return tot_cost
     def print_total(self):#this function is not working
+        pass
         print('OUTPUT SHOPPING CART')
         print("%s's Shopping Cart -"%customer_name,current_date)
         print('Number of Items:')
@@ -51,6 +53,22 @@ def print_menu(ShopingCart):
     print('q - Quit')
     print()
     option=input('Choose an option:\n')
+    while option != 'q':
+        if option is 'a':
+            item=ShoppingCart()
+            
+            item.add_item(ShoppingCart)
+        if option is 'r':
+            print('REMOVE ITEM FROM CART')
+            item_name=input('Enter name of item to remove:\n')
+            remove_item(item_name)
+        if option is 'c':
+            pass
+        if option is 'i':
+            pass
+        if option is 'o':
+            print_total(ShoppingCart)#File "main.py", line 73, in <module> print_total()# NameError: name 'print_total' is not defined
+        option=input('Choose an option:\n')
     return
 if __name__ == "__main__":
     customer_name=input("Enter customer's name:\n")
@@ -60,15 +78,3 @@ if __name__ == "__main__":
     print("Today's date:",current_date)
     print()
     print_menu(ShoppingCart)
-    while option != 'q':
-        if option is 'a':
-            pass
-        if option is 'r':
-            pass
-        if option is 'c':
-            pass
-        if option is 'i':
-            pass
-        if option is 'o':
-            print_total()#File "main.py", line 73, in <module> print_total()# NameError: name 'print_total' is not defined
-        option=input('Choose an option:\n')
