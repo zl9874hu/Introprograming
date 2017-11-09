@@ -30,14 +30,12 @@ class ShoppingCart:
         for x in self.cart_items:
             tot_cost+=(x.item_price * x.item_quantity)
         return tot_cost
-    def print_total(self):
-        num_items=get_num_items_in_cart()
-        total_cost= get_cost_of_cart()
+    def print_total(self):#this function is not working
         print('OUTPUT SHOPPING CART')
         print("%s's Shopping Cart -"%customer_name,current_date)
-        print('Number of Items:',num_items)
+        print('Number of Items:')
         print()
-        print('Total Cost: $%d'%total_cost)
+        print('Total Cost: ')
     def print_descriptions(self):
         print('OUTPUT ITEMS DESCRIPTIONS')
         pass
@@ -72,5 +70,5 @@ if __name__ == "__main__":
         if option is 'i':
             pass
         if option is 'o':
-            print_total
+            print_total()#File "main.py", line 73, in <module> print_total()# NameError: name 'print_total' is not defined
         option=input('Choose an option:\n')
