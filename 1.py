@@ -7,8 +7,8 @@ class cell_phone:
     def get_model(self):
     def get_retail_price(self):
 def print_menu(option):
-    print('0 to input all details\n1 to set manufacturer\n2 to set model\n3 to set price\n\
-4 to get manufacturer\n5 to get model\n6 to get price\n7 to get phone details\nq to quit')
+    print('0 to input the details of your phone\n1 to input manufacturure\n2 to input price\n3 to input price\n\
+4 to see manufacturer\n5 to see model\n6 to see price\n7 to recall phone details\nq to quit')
     while option !='q':
         if option is '0':
         if option is'1':
@@ -23,4 +23,3 @@ def print_menu(option):
     return option
 
 option=''
-print_menu(option)
