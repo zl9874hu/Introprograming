@@ -6,9 +6,9 @@ class Employee:
         self.title=title
 
 
-susan=Employee('Susan Meyers','47899', 'Accounting', 'Vice President')
-mark=Employee('Mark Jones', '39119', 'IT', 'Programmer')
-joy=Employee('Joy Rogers', '81774', 'Manufacturing', 'Engineer')
+susan=Employee('Serena Meyers','47899', 'Law', 'Vice President')
+mark=Employee('Mathew Jones', '39119', 'IT', 'Phone Handler')
+joy=Employee('Dayami Rogers', '81774', 'Manufacturing', 'Techinican')
 employees=[susan , mark , joy]
 for e in employees:
     print('Name:',e.name)
